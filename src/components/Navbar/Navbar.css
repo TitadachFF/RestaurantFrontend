@@ -1,0 +1,25 @@
+#nav{
+   
+background-color: #e21b70;
+}
+#logo{
+ margin-left: 15px;
+}
+#logo-name{
+   color: white;
+}
+#log-btn{
+margin-left: 480px;
+
+}
+#searchbox{
+    margin-left:  400px;
+    width: 30%;
+
+    justify-content: center;
+}
+#nav2{
+    background-color: #ff70ae;
+    color: white;
+
+}
