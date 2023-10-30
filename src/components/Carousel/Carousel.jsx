@@ -2,7 +2,7 @@ import React from "react";
 import './Carousel.css'
 const Carousel = () => {
     return (
-        <div className="flex flex-wrap items-center mt-20">
+        <div id="al" className="flex flex-wrap items-center mt-20">
 
 <img
        

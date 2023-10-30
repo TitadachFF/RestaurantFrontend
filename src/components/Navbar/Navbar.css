@@ -1,6 +1,7 @@
 #nav{
    
 background-color: #e21b70;
+
 }
 #logo{
  margin-left: 15px;
@@ -9,17 +10,83 @@ background-color: #e21b70;
    color: white;
 }
 #log-btn{
-margin-left: 480px;
+margin-left: 780px;
+
 
 }
 #searchbox{
-    margin-left:  400px;
+    margin-left:  100px;
     width: 30%;
-
+display: flex;
     justify-content: center;
 }
 #nav2{
-    background-color: #ff70ae;
-    color: white;
+    background-color: #ffffff;
+   color: grey;
+   justify-content: center;
+   display: flex;
 
+}
+
+
+#nav2-text:hover{
+    background-color: pink;
+    border-radius: 2px;
+color: black;
+width: 80px;
+padding-left: 5px;
+
+
+}
+
+#nav4-text:hover{
+    background-color: pink;
+    border-radius: 2px;
+color: black;
+width: 150px;
+padding-left: 5px;
+
+
+}
+#nav4-text{
+    display: block;
+    margin-left: 50px;
+}
+
+
+#nav2img{
+    width: 50px;
+   margin-left: 9px;
+   background-size: 70px;
+
+
+}
+#nav3img{
+  
+   margin-left: 5px;
+   max-width: 50px;
+   
+
+
+}
+#nav4img{
+  
+    margin-left: 40px;
+    max-width: 50px;
+    
+ 
+ }
+
+.navbar-nav{
+    display: flex;
+    padding-bottom: 0px;
+
+
+}
+
+#nav2-text{
+    display: block;
+
+  margin-left: 50px;
+    
 }
