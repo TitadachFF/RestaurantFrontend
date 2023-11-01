@@ -1,0 +1,15 @@
+.fpd{
+    font-size: 40px;
+    color: rgb(187, 3, 178);
+}
+.car{
+    text-align: center;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    
+
+}
+#al{
+    margin-top: 200px;
+}
