@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -9,7 +10,7 @@ const NavBar = () => {
     >
       <div id="logo" className="flex justify-between items-center mx-auto p-3">
         <div className="w-[200px]">
-          <a href="https://flowbite.com/" className="flex items-center">
+          <a href="/" className="flex items-center">
             <img
               src="http://www.babyriki.com/wp-content/uploads/2018/08/babyriki-pandy.png"
               className="h-20 mr-3 flex"
@@ -24,13 +25,14 @@ const NavBar = () => {
           </a>
         </div>
         <div className="flex md:order-2">
-          <button
+          <Link className="nav-link flex text-white bg-pink-400 hover:bg-pink-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" to="signin"
+           
             id="log-btn"
             type="button"
-            className="flex text-white bg-pink-400 hover:bg-pink-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            
           >
             เข้าสู่ระบบ / ลงทะเบียน
-          </button>
+          </Link>
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"

@@ -6,3 +6,75 @@ body{
 
 }
 
+.card{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+   margin-left: 20px;
+  }
+  .badge{
+    color: black;
+  }
+  .card{
+    margin-top: 20px;
+  }
+  .blur{
+    position: absolute;
+    box-shadow: 0 0 100px 50px #1d4ed8;
+    z-index: -100;
+  }
+  .form {
+    justify-content: center;
+  }
+  .navbar {
+    border-radius: 20px;
+  }
+  body {
+    margin: 0;
+    font-weight: 100;
+    font-size: 16px;
+
+}
+
+/* Style the main heading */
+h1 {
+    font-family: cursive;
+    text-align: center;
+    color: #e21b70;
+    font-size: 2rem;
+   
+}
+
+/* Style the container for restaurants */
+.restaurants {
+ display: flex;
+  flex-wrap: wrap;
+  color: black;
+  justify-content: center;
+  padding: 0px;
+
+
+    
+}
+
+/* Style individual restaurant images */
+.restaurants > img {
+      flex: 1;
+  object-fit: cover;
+  margin: auto;
+
+}
+
+/* Style input elements */
+input {
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 24px;
+    width: 50%;
+    padding: 1rem; /* Adjust padding for better appearance */
+    margin: 0 auto; /* Center horizontally */
+    font-size: 100%;
+}
