@@ -1,13 +1,13 @@
 #nav{
    
-background-color: #e21b70;
+background-color: #F472B6;
 
 }
 #logo{
  margin-left: 15px;
 }
 #logo-name{
-   color: white;
+
 }
 
 
@@ -18,54 +18,21 @@ display: flex;
     justify-content: center;
 }
 #nav2{
-    background-color: #ffffff;
-   color: grey;
+   
+  
    justify-content: center;
    display: flex;
 
 }
 
 
-#nav2-text:hover{
-    background-color: pink;
-    border-radius: 2px;
-color: black;
-width: 80px;
-padding-left: 5px;
 
 
-}
-
-#nav4-text:hover{
-    background-color: pink;
-    border-radius: 2px;
-color: black;
-width: 150px;
-padding-left: 5px;
 
 
-}
-#nav4-text{
-    display: block;
-    margin-left: 50px;
-}
 
 
-#nav2img{
-    width: 50px;
-   margin-left: 9px;
-   background-size: 70px;
 
-
-}
-#nav3img{
-  
-   margin-left: 5px;
-   max-width: 50px;
-   
-
-
-}
 #nav4img{
   
     margin-left: 40px;

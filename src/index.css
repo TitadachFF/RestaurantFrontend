@@ -1,8 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body{
+  font-family: 'Ubuntu', sans-serif;
   font-family: 'Kanit', sans-serif;
+
 
 }
 
@@ -29,25 +32,17 @@ body{
   }
   .form {
     justify-content: center;
+    
   }
   .navbar {
     border-radius: 20px;
   }
   body {
-    margin: 0;
-    font-weight: 100;
-    font-size: 16px;
+
 
 }
 
-/* Style the main heading */
-h1 {
-    font-family: cursive;
-    text-align: center;
-    color: #e21b70;
-    font-size: 2rem;
-   
-}
+
 
 /* Style the container for restaurants */
 .restaurants {

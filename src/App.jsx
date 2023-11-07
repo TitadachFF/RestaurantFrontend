@@ -1,7 +1,7 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import "./App.css";
+import { Typography } from "@material-tailwind/react";
 import Navbar from "./components/Navbar/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Card from "./components/Card/Card";
@@ -12,14 +12,16 @@ import Search from "./pages/Search";
 import Update from "./pages/Update";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
   return (
+    
     <BrowserRouter>
-    Ro
+    <div className=" bg-gray-100" >
       <Navbar />
-     
+
      
 
       <div className="App">
@@ -29,12 +31,20 @@ function App() {
         <Route path="/Search" element={<Search />} />
         <Route path="/Update/:restaurantId" element={<Update />} />
         <Route path="/Signin" element={<Signin />} />
-
-
+        <Route path="Signup" element={<Signup />} />
+    
         </Routes>
+        <div>
+  
+        </div>
+<Footer/>
+      </div>
+      
       </div>
     </BrowserRouter>
+        
   );
 }
+
 
 export default App;
