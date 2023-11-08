@@ -6,9 +6,8 @@ const NavBar = () => {
   return (
     <nav
       id="nav"
-      className="dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
+      className="dark:bg-gray-900 fixed w-full z-20 top-0 left-0  border-pink-300 dark:border-gray-600 border-b-[3px]"
     >
-      
       <div id="logo" className="flex justify-between items-center mx-auto p-3 ">
         <div className="w-[200px]">
           <a href="/" className="flex items-center   ">
@@ -27,20 +26,19 @@ const NavBar = () => {
               id="logo-name"
               className="self-center text-2xl font-semibold whitespace-nowrap text-pink-200 font-bold text-[30px] "
             >
-              Pandy 
+              Pandy
             </span>
-            
           </a>
         </div>
-     
+
         <div className="flex md:order-2">
-          <Link className="nav-link flex text-white bg-pink-300 hover:bg-pink-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" to="Signin"
-           
+          <Link
+            className="nav-link flex text-white bg-pink-300 hover:bg-pink-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            to="Signin"
             id="log-btn"
             type="button"
-            
           >
-           📝 เข้าสู่ระบบ / ลงทะเบียน
+            📝 เข้าสู่ระบบ / ลงทะเบียน
           </Link>
           <button
             data-collapse-toggle="navbar-sticky"
@@ -95,68 +93,7 @@ const NavBar = () => {
         </div>
       </div>
 
-      <nav id="nav2" className="md:flex justify-center bg-white text-pink-500">
-        <div className="flex ">
-          <ul className="flex flex-row space-x-4 md:space-x-6">
-            <li className="nav2-item">
-              <a
-                href="#"
-                id="nav2-text"
-                className="flex flex-col items-center dark:text-white rounded-md  w-[90px]  text-center hover:bg-gray-300"
-              >
-                <img className=" w-[50px] content-center    mx-[20px]  "
-                  id="nav2img"
-                  src="https://png.pngtree.com/png-clipart/20221001/ourmid/pngtree-fast-food-big-ham-burger-png-image_6244235.png"
-                  alt=""
-                />
-                <p>อาหารทั่วไป</p>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                id="nav2-text"
-                className="flex flex-col items-center dark:text-white rounded-md  w-[90px]  text-center hover:bg-gray-300"
-              >
-                <img  className=" w-[50px] content-center    mx-[20px]  "
-              
-                  src="https://png.pngtree.com/png-clipart/20230411/original/pngtree-ice-cream-dessert-realistic-white-background-transparent-png-image_9047252.png"
-                  alt=""
-                />
-                <p>ของหวาน</p>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                id="nav2-text"
-                className="flex flex-col items-center dark:text-white rounded-md  w-[90px]  text-center hover:bg-gray-300"
-              >
-                <img className=" w-[50px] content-center    mx-[20px]  "
-                  id="nav3img"
-                  src="https://png.pngtree.com/png-clipart/20230417/original/pngtree-pearl-milk-tea-pearl-drink-transparent-png-image_9059833.png"
-                  alt=""
-                />
-                <p>เครื่องดื่ม</p>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                id="nav4-text"
-                className="flex flex-col items-center dark:text-white rounded-md  w-[150px]  text-center hover:bg-gray-300"
-              >
-                <img className=" w-[50px] content-center    mx-[40px]  "
-                  id="nav4img"
-                  src="https://png.pngtree.com/png-clipart/20230504/original/pngtree-chocolate-melted-water-drops-png-image_9136876.png"
-                  alt=""
-                />
-                <p>ของทานเล่น ฯลฯ</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    
     </nav>
   );
 };

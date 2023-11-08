@@ -13,6 +13,8 @@ import Update from "./pages/Update";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import Footer from "./components/Footer/Footer";
+import CarouselCustomArrows from "./components/Carousel/Carousel";
+import NavBarCate from "./components/Navbar/Navbar.category";
 
 
 function App() {
@@ -20,8 +22,9 @@ function App() {
     
     <BrowserRouter>
     <div className=" bg-gray-100" >
-      <Navbar />
+    <Navbar />
 
+   
      
 
       <div className="App">
