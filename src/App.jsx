@@ -15,40 +15,38 @@ import Signup from "./pages/Signup";
 import Footer from "./components/Footer/Footer";
 import CarouselCustomArrows from "./components/Carousel/Carousel";
 import NavBarCate from "./components/Navbar/Navbar.category";
-
-
+import { AuthProvider } from "./context/AuthContext";
+import Profile from "./pages/Profile";
+import AdminRoute from "./pages/AdminRoute";
+import ProtectedRoute from "./pages/ProtectedRoute";
 
 function App() {
   return (
-    
-    <BrowserRouter>
-    <div className=" bg-gray-100" >
-    <Navbar />
-
-   
-     
-
-      <div className="App">
-        <Routes>
-        <Route path="/" element={<Restaurant />} />
-        <Route path="/add" element={<Add />} />
-        <Route path="/Search" element={<Search />} />
-        <Route path="/Update/:restaurantId" element={<Update />} />
-        <Route path="/Signin" element={<Signin />} />
-        <Route path="Signup" element={<Signup />} />
-    
-        </Routes>
-        <div>
-  
-        </div>
-<Footer/>
-      </div>
+    <AuthProvider>
       
-      </div>
-    </BrowserRouter>
-        
+      <BrowserRouter>
+
+
+      
+        <div className=" bg-gray-100">
+          <Navbar />
+
+          <div className="App">
+            <Routes>
+              <Route path="/" element={<Restaurant />} />
+              <Route path="/Profile" element={<Profile />} />
+              <Route path="/Update/:restaurantId" element={<Update />} />
+              <Route path="/Signin" element={<Signin />} />
+              <Route path="Signup" element={<Signup />} />
+   
+            </Routes>
+          </div>
+        </div>
+
+        <Footer />
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
-
 
 export default App;

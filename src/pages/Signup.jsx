@@ -41,54 +41,62 @@ const Signup = () => {
   };
 
   return (
-    <div className="container">
-      <h1>Signup</h1>
+    <div className=" mt-[90px] h-[700px] flex justify-center items-center ">
+  
       <div className="row form">
         <div className="col-6 card justify-content-center">
-          <h5 className="card-header">Create an Account</h5>
+        <h1 className=" font-bold text-[30px]">สมัครสมาชิก</h1>
+          <h5 className="card-header">สร้างบัญชีของคุณ</h5>
           {/* <div className="error">{error && 'Something went wrong.'}</div> */}
           <div className="card-body">
             <form>
               <div className="form-group">
-                <label htmlFor="username">Username</label>
+              <label htmlFor="username" className="text-[20px]">*ชื่อผู้ใช้ : </label>
+              <br />
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control rounded-lg w-[500px]"
                   name="username"
                   placeholder="Username"
                   onChange={handleChange}
                   value={user.username}
                 />
               </div>
-
+<br />
               <div className="form-group">
-                <label htmlFor="email">Email</label>
+                <label className="text-[20px]" htmlFor="email " >*อีเมล์</label>
+               <br />
                 <input
                   type="email"
-                  className="form-control"
+                  className="form-control rounded-lg w-[500px]"
                   name="email"
-                  placeholder="Email"
+                  placeholder="Example@gmail.com"
                   onChange={handleChange}
                   value={user.email}
                 />
               </div>
-
+<br />
               <div className="form-group">
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password" className="text-[20px]">
+                  *รหัสผ่าน :
+                </label>
+                <br />
                 <input
                   type="password"
-                  className="form-control"
+                  className="form-control rounded-lg w-[500px]"
                   name="password"
                   placeholder="Password"
                   onChange={handleChange}
                   value={user.password}
                 />
               </div>
+              <br />
               <div className="form-group">
-                <label htmlFor="confirmpassword">Confirm Password</label>
+                <label className="text-[20px]"  htmlFor="confirmpassword">*ยืนยันรหัสผ่าน:</label>
+             <br />
                 <input
                   type="password"
-                  className="form-control"
+                  className="form-control rounded-lg w-[500px]"
                   name="confirmpassword"
                   placeholder="Confirm Password"
                   onChange={handleChange}
@@ -96,23 +104,31 @@ const Signup = () => {
                 />
               </div>
 <br />
-            
+<div className="flex justify-center">
               <Link to="/signin"
                 type="submit"
-                className="btn btn-success"
+                className="btn btn-success  bg-pink-500 text-white rounded-xl p-3 mr-2 "
                 onClick={handleSignup}
               >
-                Signup
+                ลงทะเบียน
               </Link>
+              
+              </div>
+              <label htmlFor="name" className="text-[15px] mt-[10px] text-red-500 justify-end flex">*โปรดตรวจสอบรายละเอียดก่อนทำลงทะเบียน</label>{" "}
+              <hr className="my-5 border-blue-gray-300 decoration-dashed" />
               &nbsp;
-              <Link to="/signin" className="btn btn-secondary">
-                Already have an account? Login
+              <div className=" justify-end flex">
+              <p className=" mr-[10px]">คุณมีบัญชีอยู่เเล้วใช่ไหม ?</p>
+              <Link to="/signin" className=" text-pink-500 font-bold ">
+                เข้าสู่ระบบ
               </Link>
+              </div>
             </form>
           </div>
         </div>
       </div>
     </div>
+    
   );
 };
 

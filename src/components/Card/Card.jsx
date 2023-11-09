@@ -12,7 +12,7 @@ const Card = ({ restaurant, handleDelete }) => {
 
     
     return (
-        <div className="card" style={{ width: "18rem" }}      key={restaurant.id} >
+        <div className="card" style={{ width: "18rem" }} key={restaurant.id}>
             <img src={restaurant.image} alt="" className='card-img-top' />
             <div className="card-body">
                 <h5 className='title'>{restaurant.name}</h5>

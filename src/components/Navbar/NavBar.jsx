@@ -1,6 +1,6 @@
 import React from "react";
-import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
+
 
 const NavBar = () => {
   return (
@@ -30,7 +30,7 @@ const NavBar = () => {
             </span>
           </a>
         </div>
-
+        
         <div className="flex md:order-2">
           <Link
             className="nav-link flex text-white bg-pink-300 hover:bg-pink-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -46,25 +46,13 @@ const NavBar = () => {
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-sticky"
             aria-expanded="false"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
+          >         
           </button>
+
         </div>
+   
+      
+    
         <div id="searchbox" className="relative hidden md:block mr-[620px] ">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <svg
