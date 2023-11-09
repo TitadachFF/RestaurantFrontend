@@ -8,8 +8,8 @@ import * as loadingData from "../loading/restaurant.json";
 import { Carousel } from '@material-tailwind/react';
 import NavBarCate from '../components/Navbar/Navbar.category';
 import authHeader from "../services/auth.header";
-
-
+import NavBar from '../components/Navbar/NavBar';
+import { useAuthContext } from '../context/AuthContext';
 
 
 
@@ -26,6 +26,7 @@ const config = {
 };
 
 const Restaurant = () => {
+    const {user}=useAuthContext()
     const [restaurants, setrestaurants] = useState([]);
     const [loading, setLoading] = useState(false);
     useEffect(() => {
@@ -55,16 +56,18 @@ const Restaurant = () => {
   <>
 
 
-
+<NavBar/>
   <CarouselCustomArrows/>
+  
   <NavBarCate/>
-  
+
 
   
 
-  
-  <h1 className=' ml-[210px] mt-[20px] font-bold text-[30px] text-gray-700'  >📢 รายการอาหารที่แนะนำ</h1>
-    <div className='place-items-center ml-[0px] mr-[20px] '>
+  <div className='bg-gray-100 '>
+<br />
+  <h1 className='  mt-[20px] font-bold text-[30px] text-gray-700 text-center '   >🍝 เมนูทั้งหมดในร้าน</h1>
+    <div className='place-items-center ml-[0px] mr-[20px]  '>
       
 
  
@@ -76,6 +79,7 @@ const Restaurant = () => {
               return (
                 
                 <Card
+                user={user}
                   restaurant={restaurant}
                   key={restaurant.id} // Move the key prop here
                   handleDelete={handDelete}
@@ -89,55 +93,13 @@ const Restaurant = () => {
         </div>
     </div>
     </div>
+<br /> <br />
+    </div>
 
-    <br /><br />
     
     
 
-    <div>
-      
-    <h1 className=' ml-[210px] mt-[20px] font-bold text-[30px] text-gray-700' >🔖 สินค้าขายดี</h1>
-        <div className="row">
-        {!loading ? (
-          <div className="restaurants">
-            {restaurants.map((restaurant) => {
-              return (
-                <Card
-                  restaurant={restaurant}
-                  key={restaurant.id}
-                  handleDelete={handDelete}
-                />
-              );
-            })}
-          </div>
-        ) : (
-          <Loading animation={loadingData} />
-        )}
-        </div>
-    </div>
-    <br /><br />
-
-    <div>
-    <h1 className='  mt-[20px] font-bold text-[30px] text-gray-700 text-center' >🍝 เมนูทั้งหมดในร้าน</h1>
-        <div className="row">
-        {!loading ? (
-          <div className="restaurants">
-            {restaurants.map((restaurant) => {
-              return (
-                <Card
-                  restaurant={restaurant}
-                  key={restaurant.id}
-                  handleDelete={handDelete}
-                />
-              );
-            })}
-          </div>
-        ) : (
-          <Loading animation={loadingData} />
-        )}
-        </div>
-    </div>
-    <br /><br />
+    
 
 
 

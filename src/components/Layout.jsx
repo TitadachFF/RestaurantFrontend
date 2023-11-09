@@ -1,4 +1,4 @@
-import NavBar from "./NavBar";
+import NavBar from "./Navbar/NavBar";
 import { Outlet } from "react-router-dom";
 import { AuthProvider } from "../context/AuthContext";
 

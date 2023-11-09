@@ -22,7 +22,7 @@ const NavBarCate = () => {
                 src="https://png.pngtree.com/png-clipart/20221001/ourmid/pngtree-fast-food-big-ham-burger-png-image_6244235.png"
                 alt=""
               />
-              <p>อาหารทั่วไป</p>
+              <p>อาหาร</p>
             </a>
           </li>
           <li>

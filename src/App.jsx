@@ -2,7 +2,6 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import { Typography } from "@material-tailwind/react";
-import Navbar from "./components/Navbar/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Card from "./components/Card/Card";
 import Carousel from "./components/Carousel/Carousel";
@@ -19,33 +18,47 @@ import { AuthProvider } from "./context/AuthContext";
 import Profile from "./pages/Profile";
 import AdminRoute from "./pages/AdminRoute";
 import ProtectedRoute from "./pages/ProtectedRoute";
+import NotAllow from "./pages/NotAllow";
+import Layout from "./components/Layout";
+
 
 function App() {
   return (
-    <AuthProvider>
-      
+<AuthProvider>
       <BrowserRouter>
+ 
+
+        <Routes>
+        <Route path="/" element={<Layout/>}>
+    
+            <Route index element={<Restaurant />} />
 
 
+            <Route 
+            path="/add" element=
+            {<AdminRoute>
+              <Add />
+              </AdminRoute>} />
+
+            <Route path="/Search" element=
+            {<ProtectedRoute>
+              <Search />
+              </ProtectedRoute>} />
+
+
+              <Route path="/NotAllow" element={<NotAllow />} />
       
-        <div className=" bg-gray-100">
-          <Navbar />
-
-          <div className="App">
-            <Routes>
-              <Route path="/" element={<Restaurant />} />
-              <Route path="/Profile" element={<Profile />} />
-              <Route path="/Update/:restaurantId" element={<Update />} />
-              <Route path="/Signin" element={<Signin />} />
-              <Route path="Signup" element={<Signup />} />
-   
-            </Routes>
-          </div>
-        </div>
+          <Route path="/Profile" element={<Profile />} />
+          <Route path="/Signin" element={<Signin />} />
+          <Route path="Signup" element={<Signup />} />
+          <Route path="/Update/:restaurantId" element=
+            {<AdminRoute><Update /></AdminRoute>} />
+     </Route>
+        </Routes>
 
         <Footer />
       </BrowserRouter>
-    </AuthProvider>
+      </AuthProvider>
   );
 }
 

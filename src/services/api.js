@@ -40,7 +40,7 @@ instance.interceptors.response.use(
         const originalConfig = err.config;
         if (originalConfig.url !== "/api/auth/signin" && err.response) {
             if (err.response.status === 401 && originalConfig._retry) {
-                originalCofig,
+                originalConfig,
                 _retry = true;
                 try {
                     const rs = await instance.post("/api/auth/refreshtoken", {
