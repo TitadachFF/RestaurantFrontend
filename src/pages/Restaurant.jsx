@@ -65,13 +65,14 @@ const Restaurant = () => {
         <div className="card  ">
         <div className="row">
         {!loading ? (
-          <div className="restaurants">
+          <div  className="restaurants">
             {restaurants.map((restaurant) => {
               return (
+                
                 <Card
                   restaurant={restaurant}
-                  key={restaurant.id}
-                  handelDelete={handDelete}
+                  key={restaurant.id} // Move the key prop here
+                  handleDelete={handDelete}
                 />
               );
             })}
@@ -98,7 +99,7 @@ const Restaurant = () => {
                 <Card
                   restaurant={restaurant}
                   key={restaurant.id}
-                  handelDelete={handDelete}
+                  handleDelete={handDelete}
                 />
               );
             })}
@@ -120,7 +121,7 @@ const Restaurant = () => {
                 <Card
                   restaurant={restaurant}
                   key={restaurant.id}
-                  handelDelete={handDelete}
+                  handleDelete={handDelete}
                 />
               );
             })}

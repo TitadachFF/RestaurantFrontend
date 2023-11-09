@@ -37,9 +37,9 @@ instance.interceptors.response.use(
         return res;
     },
     async (err) => {
-        const originalConfig = err.config;
-        if (originalConfig.url !== "/api/auth/signin" && err.response) {
-            if (err.response.status === 401 && originalConfig._retry) {
+        const originalCofig = err.config;
+        if (originalCofig.url !== "/api/auth/signin" && err.response) {
+            if (err.response.status === 401 && originalCofig._retry) {
                 originalCofig,
                 _retry = true;
                 try {
@@ -50,7 +50,7 @@ instance.interceptors.response.use(
                         accessToken
                     } = rs.data;
                     Tokenservice.setLocalAccessToken(accessToken);
-                    return instance(originalConfig)
+                    return instance(originalCofig)
                 } catch (_error) {
                     return Promise.reject(_error);
                 }

@@ -60,7 +60,7 @@ export default function CarouselCustomArrows() {
       )}
     >
       <img
-        src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+        src="https://www.mk1642.com/getattachment/bda38908-f5a4-436e-906a-6c1c51c66ea9/4744.aspx"
         alt="image 1"
         className=" w-full object-cover max-h-[400px]"
       

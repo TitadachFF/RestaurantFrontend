@@ -4,7 +4,7 @@ import Update from "../../pages/Update";
 import axios from "axios";
 
 
-const Card = ({ restaurant, handelDelete }) => {
+const Card = ({ restaurant, handleDelete }) => {
     if (!restaurant || !restaurant.image) {
         // Handle the case where 'restaurant' or 'image' is undefined
         return null; // or return some default content or error message
@@ -12,14 +12,14 @@ const Card = ({ restaurant, handelDelete }) => {
 
     
     return (
-        <div className="card" style={{ width: "18rem" }} key={restaurant.id}>
+        <div className="card" style={{ width: "18rem" }}      key={restaurant.id} >
             <img src={restaurant.image} alt="" className='card-img-top' />
             <div className="card-body">
                 <h5 className='title'>{restaurant.name}</h5>
                 <p className="card-text">{restaurant.type}</p>
                 <div className="mt-[20px] ">
                 <Link id="btn-card" to="" className=' bg-red-600 text-white rounded-xl p-2 mr-2' onClick={() => {
-                    handelDelete(restaurant.id);
+                    handleDelete(restaurant.id);
                 }}>
                     Delete
                 </Link>

@@ -17,6 +17,7 @@ import CarouselCustomArrows from "./components/Carousel/Carousel";
 import NavBarCate from "./components/Navbar/Navbar.category";
 
 
+
 function App() {
   return (
     

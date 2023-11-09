@@ -59,60 +59,68 @@ const Update = () => {
 console.log(restaurant);
 
     return (
-        <div className="container">
-            <h1>Grab Restaurant</h1>
+        <div className="pt-[30px] h-[700px] flex justify-center items-center  mb-[150px]">
+  
             <div className="row form">
-                <div className="col-6 card justify-content-center">
-                    <h5 className="card-header">Edit restaurant</h5>
-                    <div className="error">{error && "somethingwrong"}</div>
+                <div className="col-6 card justify-content-center ">
+                    
+                    <h1 className="card-header font-bold text-[30px] ">เเก้ไขรายการร้านอาหาร</h1>
+                    <h5 className="card-header">เเก้ไขรายละเอียดของร้านอาหาร</h5>
+                    <div className="error text-red-500">{error && "*มีบางอย่างผิดพลาดโปรดตรวจสอบข้อมูลการเเก้ไขให้ดี"}</div>
                     <div className="card-body">
                         <form onSubmit={handleClick}>
                             {" "}
                             <div className="form-group" style={{ marginTop: "10px" }}>
-                                <label htmlFor="name">Restaurant name</label>{" "}
+                                <label htmlFor="name" className="text-[20px]">ชื่อร้านอาหาร:</label>{" "}
+                                <br />
                                 <input
                                     type="text"
-                                    className="form-control"
+                                    className="form-control rounded-lg w-[500px]"
                                     name="name"
                                     placeholder={restaurant.name}
                                     onChange={handleChange}
                                 />{" "}
                             </div>{" "}
                             <div className="form-group" style={{ marginTop: "15px" }}>
-                                <label htmlFor="name">Restaurant type</label>{" "}
+                                <label htmlFor="name" className="text-[20px]">ประเภทอาหาร :
+                                </label>{" "}
+                                <br />
                                 <input
                                     type="text"
-                                    className="form-control"
+                                    className="form-control rounded-lg w-[500px]"
                                     name="type"
                                     placeholder={restaurant.type}
                                     onChange={handleChange}
                                 />{" "}
                             </div>{" "}
+                            
                             <div className="form-group" style={{ marginTop: "15px" }}>
                                 {" "}
-                                <label htmlFor="name">Restaurant image url</label>{" "}
+                                <label htmlFor="name" className="text-[20px]">รูปของร้านอาหาร :</label>{" "}
+                                <br />
                                 <input
                                     type="text"
-                                    className="form-control"
+                                    className="form-control rounded-lg w-[500px]"
                                     name="imageUrl"
                                     placeholder={restaurant.image}
                                     onChange={handleChange}
                                 />{" "}
                             </div>{" "}
-                            <div style={{ marginTop: "15px" }}>
+                            <label htmlFor="name" className="text-[15px] mt-[10px] text-red-500 justify-end flex">*โปรดตรวจสอบรายละเอียดก่อนทำการเเก้ไข</label>{" "}
+                            <div className="flex justify-center mt-[20px]">
                                 {" "}
                                 <button
-                                    className="btn btn-success"
+                                    className="btn btn-success  bg-pink-500 text-white rounded-xl p-3 mr-2 "
                                     style={{ marginRight: "15px" }}
                                     type="submit"
 
-                                >update
+                                >ยืนยันการเเก้ไข
                                 </button>{" "}
-                                <button className="btn btn-danger" >
-                                    Cancel  {" "}
+                                <button to="#" className="btn btn-success  bg-gray-500 text-white rounded-xl p-3 mr-2 " >
+                                    ยกเลิก  {" "}
                                 </button>{" "}
                                 <div className="error" style={{ marginTop: "5px" }}>
-                                    {error && "something went wrong !!"}{" "}
+                                   
                                 </div>{" "}
                             </div>{" "}
                         </form>
