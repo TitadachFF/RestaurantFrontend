@@ -1,8 +1,10 @@
 import React from "react";
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
+import { useSearchContext } from "../../hook/SearchContext";
 
 const NavBarCate = () => {
+  const {setSearchValue} = useSearchContext();
   return (
     <nav
       id="nav2"
@@ -11,8 +13,9 @@ const NavBarCate = () => {
       <div className="flex ">
         <ul className="flex flex-row space-x-4 md:space-x-6">
           <li className="nav2-item">
-            <Link
-              to="/อาหาร"
+            <a
+            onClick={()=>setSearchValue("อาหาร")}
+              href="#"
               id="nav2-text"
               className="flex flex-col items-center dark:text-white rounded-md  w-[90px]  text-center hover:bg-gray-300"
             >
@@ -22,12 +25,13 @@ const NavBarCate = () => {
                 src="https://png.pngtree.com/png-clipart/20221001/ourmid/pngtree-fast-food-big-ham-burger-png-image_6244235.png"
                 alt=""
               />
-              <p>อาหาร</p>
-            </Link>
+              <p>อาหารทั่วไป</p>
+            </a>
           </li>
           <li>
-            <Link
-              to="/ของหวาน"
+            <a
+            onClick={()=>setSearchValue("ของหวาน")}
+              href="#"
               id="nav2-text"
               className="flex flex-col items-center dark:text-white rounded-md  w-[90px]  text-center hover:bg-gray-300"
             >
@@ -37,11 +41,12 @@ const NavBarCate = () => {
                 alt=""
               />
               <p>ของหวาน</p>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/เครื่องดื่ม"
+            <a
+            onClick={()=>setSearchValue("เครื่องดื่ม")}
+              href="#"
               id="nav2-text"
               className="flex flex-col items-center dark:text-white rounded-md  w-[90px]  text-center hover:bg-gray-300"
             >
@@ -52,11 +57,12 @@ const NavBarCate = () => {
                 alt=""
               />
               <p>เครื่องดื่ม</p>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/ของทานเล่น"
+            <a
+            onClick={()=>setSearchValue("ของทานเล่น")}
+              href="#"
               id="nav4-text"
               className="flex flex-col items-center dark:text-white rounded-md  w-[150px]  text-center hover:bg-gray-300"
             >
@@ -67,9 +73,10 @@ const NavBarCate = () => {
                 alt=""
               />
               <p>ของทานเล่น ฯลฯ</p>
-            </Link>
+            </a>
           </li>
         </ul>
+     
       </div>
     </nav>
   );

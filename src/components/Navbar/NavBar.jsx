@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import AuthService from "../../services/auth.service";
 import { useAuthContext } from "../../context/AuthContext";
-
+import { useSearchContext } from "../../hook/SearchContext";
 
 
 const NavBar = () => {
@@ -15,6 +15,10 @@ const NavBar = () => {
 
   }
   
+  const handleSearchInputChange = (e) => {
+    setSearchValue(e.target.value);
+  };
+  const { searchValue, setSearchValue } = useSearchContext();
 
 
   
@@ -29,7 +33,7 @@ const NavBar = () => {
           <a href="/" className="flex items-center   ">
             <img
               src="http://www.babyriki.com/wp-content/uploads/2018/08/babyriki-pandy.png"
-              className="h-20 mr-3 flex bg-pink-200 rounded-full    "
+              className="h-20 mr-3 flex  rounded-full    "
               alt="Pandy Logo"
             />
             <span
@@ -94,6 +98,8 @@ const NavBar = () => {
             <span className="sr-only">Search icon</span>
           </div>
           <input
+          value={searchValue}
+          onChange={handleSearchInputChange}
             type="text"
             id="search-navbar"
             className="block w-full p-2 pl-10 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -105,9 +111,9 @@ const NavBar = () => {
 <div className="ml-[420px]">
         {user && user.roles.includes("ROLES_ADMIN") &&  (
         
-          <Link className="nav-link  bg-red-500 rounded-xl pl-[10px] pr-[10px] pt-[5px] pb-[5px]  font-bold text-white" to="add">
+          <button className="nav-link  bg-red-500 rounded-xl pl-[10px] pr-[10px] pt-[5px] pb-[5px]  font-bold text-white" to="add">
          +เพิ่มรายการอาหาร
-            </Link>
+            </button>
    
             )}
 </div>
@@ -116,7 +122,7 @@ const NavBar = () => {
         <div className="">
               <span className=" text-white text-[20px] ">ยินดีต้อนรับ, <span className="mr-sm2 h4">
                 <Link className='nav-link ' to={"Profile"}>{user.username} </Link>
-                <Link className='nav-link bg-blue-300 rounded-xl pl-[10px] pr-[10px] pt-[5px] pb-[5px] mr-1' to={"Profile"}>ดูข้อมูลบัญชี</Link></span>
+                <button className='nav-link bg-blue-300 rounded-xl pl-[10px] pr-[10px] pt-[5px] pb-[5px] mr-1' to={"Profile"}>ดูข้อมูลบัญชี</button></span>
               </span>
            
               <button className=" text-red-800 rounded-xl  mr-2 text-[15px] pl-[2px] pr-[2px] border-[1px] border-solid border-pink-300 border "  onClick={handlelogout}>ออกจากระบบ</button>

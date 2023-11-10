@@ -26,19 +26,17 @@ const Card = ({ restaurant, handleDelete, user, logout }) => {
         <h5 className="title">{restaurant.name}</h5>
         <p className="card-text mb-[20px]">{restaurant.type}</p>
 
-        {user &&
-          user.roles &&
-          user.roles.some((role) => role === "ROLES_ADMIN") && (
-            <Link
-              to=""
-              className=" bg-red-600 text-white rounded-xl p-2 mr-2 "
-              onClick={() => {
-                handleDelete(restaurant.id);
-              }}
-            >
-              ลบเมนูอาหารนี้
-            </Link>
-          )}
+        {user && user.roles && user.roles.some((role) => role === "ROLES_ADMIN") && (
+  <Link
+    to=""
+    className=" bg-red-600 text-white rounded-xl p-2 mr-2 "
+    onClick={() => {
+      handleDelete(restaurant.id);
+    }}
+  >
+    ลบเมนูอาหารนี้
+  </Link>
+)}
 
         {user && user.roles.includes("ROLES_ADMIN") && (
           <Link

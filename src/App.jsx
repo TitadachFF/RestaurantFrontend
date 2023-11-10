@@ -20,50 +20,49 @@ import AdminRoute from "./pages/AdminRoute";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import NotAllow from "./pages/NotAllow";
 import Layout from "./components/Layout";
-import FoodList from "./components/FoodList";
+import { SearchProvider } from "./hook/SearchContext";
 
 
 function App() {
   return (
-<AuthProvider>
-      <BrowserRouter>
- 
-
-        <Routes>
-        <Route path="/" element={<Layout/>}>
-    
-            <Route index element={<Restaurant />} />
+    <AuthProvider>
+      <SearchProvider >
+        <BrowserRouter>
 
 
-            <Route 
-            path="/add" element=
-            {<AdminRoute>
-              <Add />
-              </AdminRoute>} />
+          <Routes>
+            <Route path="/" element={<Layout />}>
 
-            <Route path="/Search" element=
-            {<ProtectedRoute>
-              <Search />
-              </ProtectedRoute>} />
+              <Route index element={<Restaurant />} />
+
+
+              <Route
+                path="/add" element=
+                {<AdminRoute>
+                  <Add />
+                </AdminRoute>} />
+
+              <Route path="/Search" element=
+                {
+                  <Search />
+                } />
 
 
               <Route path="/NotAllow" element={<NotAllow />} />
-              <Route path="/อาหาร" element={<FoodList type="อาหาร" />} />
-        <Route path="/ของหวาน" element={<FoodList type="ของหวาน" />} />
-        <Route path="/เครื่องดื่ม" element={<FoodList type="เครื่องดื่ม" />} />
-        <Route path="/ของทานเล่น" element={<FoodList type="ของทานเล่น" />} />
-          <Route path="/Profile" element={<Profile />} />
-          <Route path="/Signin" element={<Signin />} />
-          <Route path="Signup" element={<Signup />} />
-          
-          <Route path="/Update/:restaurantId" element=
-            {<AdminRoute><Update /></AdminRoute>} />
-     </Route>
-        </Routes>
 
-        <Footer />
-      </BrowserRouter>
-      </AuthProvider>
+              <Route path="/Profile" element={<Profile />} />
+              <Route path="/Signin" element={<Signin />} />
+              <Route path="Signup" element={<Signup />} />
+              <Route path="/Update/:restaurantId" element=
+                {<AdminRoute><Update /></AdminRoute>} />
+            </Route>
+          </Routes>
+
+          <Footer />
+        </BrowserRouter>
+      </SearchProvider>
+    </AuthProvider>
+
   );
 }
 

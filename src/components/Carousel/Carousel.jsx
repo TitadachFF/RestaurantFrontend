@@ -6,7 +6,7 @@ export default function CarouselCustomArrows() {
   return (
     <div>
     <Carousel
-      className=" max-h-[400px] mt-[100px] "
+      className=" max-h-[650px] mt-[100px] "
       prevArrow={({ handlePrev }) => (
         <IconButton
           variant="text"
@@ -59,25 +59,28 @@ export default function CarouselCustomArrows() {
         </IconButton>
       )}
     >
+    <img
+        src="https://images.workpointtoday.com/workpointnews/2017/12/02101039/%E0%B8%9B%E0%B8%81-%E0%B9%80%E0%B8%97%E0%B9%88%E0%B8%87-1200x630.jpg"
+        alt="image 3"
+        className=" w-full object-fill max-h-[650px]"
+   
+      />
+
+
       <img
-        src="https://www.mk1642.com/getattachment/bda38908-f5a4-436e-906a-6c1c51c66ea9/4744.aspx"
+        src="https://www.sentangsedtee.com/wp-content/uploads/2016/07/1042-140512014535.jpg"
         alt="image 1"
-        className=" w-full object-cover max-h-[400px]"
+        className=" w-full object-fill max-h-[650px]"
       
         
       />
       <img
-        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+        src="https://image.bangkokbiznews.com/uploads/images/md/2022/07/HD7ZyRAxB8O8pRthaQ2q.webp"
         alt="image 2"
-        className=" w-full object-cover max-h-[400px]"
+        className=" w-full object-fill max-h-[650px] "
    
       />
-      <img
-        src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-        alt="image 3"
-        className=" w-full object-cover max-h-[400px]"
-   
-      />
+
 
       
 
