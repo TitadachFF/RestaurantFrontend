@@ -1,8 +1,10 @@
 import React from "react";
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
+import { useSearchContext } from "../../hook/SearchContext";
 
 const NavBarCate = () => {
+  const {setSearchValue} = useSearchContext();
   return (
     <nav
       id="nav2"
@@ -12,6 +14,7 @@ const NavBarCate = () => {
         <ul className="flex flex-row space-x-4 md:space-x-6">
           <li className="nav2-item">
             <a
+            onClick={()=>setSearchValue("อาหาร")}
               href="#"
               id="nav2-text"
               className="flex flex-col items-center dark:text-white rounded-md  w-[90px]  text-center hover:bg-gray-300"
@@ -27,6 +30,7 @@ const NavBarCate = () => {
           </li>
           <li>
             <a
+            onClick={()=>setSearchValue("ของหวาน")}
               href="#"
               id="nav2-text"
               className="flex flex-col items-center dark:text-white rounded-md  w-[90px]  text-center hover:bg-gray-300"
@@ -41,6 +45,7 @@ const NavBarCate = () => {
           </li>
           <li>
             <a
+            onClick={()=>setSearchValue("เครื่องดื่ม")}
               href="#"
               id="nav2-text"
               className="flex flex-col items-center dark:text-white rounded-md  w-[90px]  text-center hover:bg-gray-300"
@@ -56,6 +61,7 @@ const NavBarCate = () => {
           </li>
           <li>
             <a
+            onClick={()=>setSearchValue("ของทานเล่น")}
               href="#"
               id="nav4-text"
               className="flex flex-col items-center dark:text-white rounded-md  w-[150px]  text-center hover:bg-gray-300"

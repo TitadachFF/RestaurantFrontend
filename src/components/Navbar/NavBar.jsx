@@ -1,18 +1,39 @@
-import React from "react";
+
 import { Link, useNavigate } from "react-router-dom";
 import AuthService from "../../services/auth.service";
 import { useAuthContext } from "../../context/AuthContext";
+import Search from "../../pages/Search";
+import axios from "axios";
+import React, { useState } from "react";
 
+
+
+
+const URL = import.meta.env.VITE_BASE_URL;
+const USERNAME = import.meta.env.VITE_BASE_USERNAME;
+const PASSWORD = import.meta.env.VITE_BASE_PASSWORD;
+const config = {
+  auth: {
+    username: USERNAME,
+    password: PASSWORD,
+  },
+
+};
 
 
 const NavBar = () => {
-
+  
   const {user, logout} = useAuthContext();
   const navigate = useNavigate();
+ 
   const handlelogout =() =>{
     logout();
     navigate("/signin")
+
+    
   }
+
+
 
   return (
     <nav
@@ -89,12 +110,10 @@ const NavBar = () => {
             <span className="sr-only">Search icon</span>
           </div>
           <input
-            type="text"
-            id="search-navbar"
-            className="block w-full p-2 pl-10 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="ค้นหาเมนูที่ถูกใจได้ที่นี้เลย..."
-          />
-          
+  className="block w-full p-2 pl-10 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+  placeholder="ค้นหาเมนูที่ถูกใจได้ที่นี้เลย..."
+/>
+        
         </div>
 
 <div className="ml-[420px]">
