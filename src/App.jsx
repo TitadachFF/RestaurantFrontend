@@ -20,6 +20,7 @@ import AdminRoute from "./pages/AdminRoute";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import NotAllow from "./pages/NotAllow";
 import Layout from "./components/Layout";
+import FoodList from "./components/FoodList";
 
 
 function App() {
@@ -47,10 +48,14 @@ function App() {
 
 
               <Route path="/NotAllow" element={<NotAllow />} />
-      
+              <Route path="/อาหาร" element={<FoodList type="อาหาร" />} />
+        <Route path="/ของหวาน" element={<FoodList type="ของหวาน" />} />
+        <Route path="/เครื่องดื่ม" element={<FoodList type="เครื่องดื่ม" />} />
+        <Route path="/ของทานเล่น" element={<FoodList type="ของทานเล่น" />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/Signin" element={<Signin />} />
           <Route path="Signup" element={<Signup />} />
+          
           <Route path="/Update/:restaurantId" element=
             {<AdminRoute><Update /></AdminRoute>} />
      </Route>

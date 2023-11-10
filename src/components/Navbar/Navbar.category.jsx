@@ -11,8 +11,8 @@ const NavBarCate = () => {
       <div className="flex ">
         <ul className="flex flex-row space-x-4 md:space-x-6">
           <li className="nav2-item">
-            <a
-              href="#"
+            <Link
+              to="/อาหาร"
               id="nav2-text"
               className="flex flex-col items-center dark:text-white rounded-md  w-[90px]  text-center hover:bg-gray-300"
             >
@@ -23,11 +23,11 @@ const NavBarCate = () => {
                 alt=""
               />
               <p>อาหาร</p>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              to="/ของหวาน"
               id="nav2-text"
               className="flex flex-col items-center dark:text-white rounded-md  w-[90px]  text-center hover:bg-gray-300"
             >
@@ -37,11 +37,11 @@ const NavBarCate = () => {
                 alt=""
               />
               <p>ของหวาน</p>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              to="/เครื่องดื่ม"
               id="nav2-text"
               className="flex flex-col items-center dark:text-white rounded-md  w-[90px]  text-center hover:bg-gray-300"
             >
@@ -52,11 +52,11 @@ const NavBarCate = () => {
                 alt=""
               />
               <p>เครื่องดื่ม</p>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              to="/ของทานเล่น"
               id="nav4-text"
               className="flex flex-col items-center dark:text-white rounded-md  w-[150px]  text-center hover:bg-gray-300"
             >
@@ -67,10 +67,9 @@ const NavBarCate = () => {
                 alt=""
               />
               <p>ของทานเล่น ฯลฯ</p>
-            </a>
+            </Link>
           </li>
         </ul>
-     
       </div>
     </nav>
   );

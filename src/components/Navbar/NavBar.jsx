@@ -12,7 +12,12 @@ const NavBar = () => {
   const handlelogout =() =>{
     logout();
     navigate("/signin")
+
   }
+  
+
+
+  
 
   return (
     <nav
