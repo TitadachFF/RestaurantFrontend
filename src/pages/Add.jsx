@@ -1,11 +1,21 @@
-import React, {useState} from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import api from "../services/api"
+/* eslint-disable no-unused-vars */
+import React , {useState} from 'react'
+import {Link, useNavigate} from 'react-router-dom'
+import axios from 'axios'
 
+const url = import.meta.env.VITE_BASE_URL;
+const USERNAME = import.meta.env.VITE_BASE_USERNAME;
+const PASSWORD = import.meta.env.VITE_BASE_PASSWORD;
 
+const config = {
+  auth: {
+    username: USERNAME,
+    password: PASSWORD,
+  },
+};
 
 const Add = () => {
-  const [restaurant, setRestaurant] =useState({
+  const [restaurant, setRestaurants] = useState ({
     name:"",
     type:"",
     image:""
@@ -13,20 +23,27 @@ const Add = () => {
   const navigate = useNavigate();
   const [error , setError] = useState(false);
 
-  const handleChange = (e) => {
-    setRestaurant((prev)=>({...prev,[e.target.name]:e.target.value}));
-
+  const handleChange = (e) =>{
+    setRestaurants((prev)=>({...prev, [e.target.name]:e.target.value}));
   }
 
   const handleClick = async (e) =>{
     e.preventDefault();
     try {
-      await axios.post(`/restaurants`,restaurant,config);
-      navigate('/');
+      await axios.post(`${url}/restaurants`,restaurant, config );
+      navigate("/")
     } catch (error) {
       console.error(error);
-      setError(true);
+      setError(true)
     }
+  }
+  const handleClear =()=>{
+    setRestaurants ({
+      name: "",
+      type:"",
+      image:"",
+    })
+    setError(false);
   }
 
 
@@ -38,7 +55,7 @@ const Add = () => {
         <h1 className=" font-bold text-[30px]">เพิ่มรายการอาหารใหม่</h1>
           <h5 className='card-header'>🍕🍔🍙🍱🥣</h5>
           <br />
-          <div className="error">{error && "somethingwrong"}</div>
+          <div className="error text-red-500">{error && "*มีบางอย่างผิดพลาดโปรดตรวจสอบ"}</div>
           <div className="card-body">
 
             <form>
