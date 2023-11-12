@@ -36,7 +36,7 @@ const NavBar = () => {
             <img
               src="image/babyriki-pandy (1).png"
               className="h-20 mr-3 flex  rounded-full    "
-              alt="Pandy Logo"
+              alt=""
             />
             <span
               id="logo-name"
