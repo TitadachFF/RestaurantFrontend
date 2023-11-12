@@ -124,7 +124,7 @@ const NavBar = () => {
         <div className="">
               <span className=" text-white text-[20px] ">ยินดีต้อนรับ, <span className="mr-sm2 h4">
                 <Link className='nav-link ' to={"Profile"}>{user.username} </Link>
-                <button className='nav-link bg-blue-300 rounded-xl pl-[10px] pr-[10px] pt-[5px] pb-[5px] mr-1' to={"Profile"}>ดูข้อมูลบัญชี</button></span>
+                <Link className='nav-link bg-blue-300 rounded-xl pl-[10px] pr-[10px] pt-[5px] pb-[5px] mr-1' to={"Profile"}>ดูข้อมูลบัญชี</Link></span>
               </span>
            
               <button className=" text-red-800 rounded-xl  mr-2 text-[15px] pl-[2px] pr-[2px] border-[1px] border-solid border-pink-300 border "  onClick={handlelogout}>ออกจากระบบ</button>
