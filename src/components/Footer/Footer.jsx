@@ -7,8 +7,8 @@ export default function Footer() {
 
       <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
         <div className="flex flex-row">
-        <img src="http://www.babyriki.com/wp-content/uploads/2018/08/babyriki-pandy.png" alt="logo-ct" className="w-20  " />
-        <h className="font-bold text-[30px] text-pink-500 mt-[20px]">FoodPandy</h>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7p18fA7YH5GS2LXXkuRrACVTCWAZbt1y8TwkdHy0Fb_SOpx2dQ_smcCvReGo-Ig-OAuw&usqp=CAU" alt="logo-ct" className="w-20 rounded-full   " />
+        <h className="font-bold text-[30px] text-pink-500  mt-[20px]">FoodPandy</h>
         </div>
         <ul className="flex flex-wrap items-center gap-y-2 gap-x-0">
             

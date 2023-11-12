@@ -34,9 +34,9 @@ const NavBar = () => {
         <div className="w-[200px]">
           <a href="/" className="flex items-center   ">
             <img
-              src="image/babyriki-pandy (1).png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7p18fA7YH5GS2LXXkuRrACVTCWAZbt1y8TwkdHy0Fb_SOpx2dQ_smcCvReGo-Ig-OAuw&usqp=CAU"
               className="h-20 mr-3 flex  rounded-full    "
-              alt=""
+              alt="Pandy Logo"
             />
             <span
               id="logo-name"
