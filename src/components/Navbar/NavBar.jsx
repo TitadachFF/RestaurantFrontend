@@ -5,6 +5,7 @@ import { useAuthContext } from "../../context/AuthContext";
 import { useSearchContext } from "../../hook/SearchContext";
 
 
+
 const NavBar = () => {
 
   const {user, logout} = useAuthContext();
@@ -14,6 +15,7 @@ const NavBar = () => {
     navigate("/signin")
 
   }
+
   
   const handleSearchInputChange = (e) => {
     setSearchValue(e.target.value);
@@ -32,7 +34,7 @@ const NavBar = () => {
         <div className="w-[200px]">
           <a href="/" className="flex items-center   ">
             <img
-              src="http://www.babyriki.com/wp-content/uploads/2018/08/babyriki-pandy.png"
+              src="image/babyriki-pandy (1).png"
               className="h-20 mr-3 flex  rounded-full    "
               alt="Pandy Logo"
             />
@@ -111,9 +113,9 @@ const NavBar = () => {
 <div className="ml-[420px]">
         {user && user.roles.includes("ROLES_ADMIN") &&  (
         
-          <button className="nav-link  bg-red-500 rounded-xl pl-[10px] pr-[10px] pt-[5px] pb-[5px]  font-bold text-white" to="add">
+          <Link className="nav-link  bg-red-500 rounded-xl pl-[10px] pr-[10px] pt-[5px] pb-[5px]  font-bold text-white" to="add">
          +เพิ่มรายการอาหาร
-            </button>
+            </Link>
    
             )}
 </div>
