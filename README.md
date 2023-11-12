@@ -1,9 +1,19 @@
-# React + Vite
+# Food Pandy Food Management Project React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+- CRUD RestfulAPI
+- Manage User
+- Access rights are defined
+Preview Page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-![397959445_221708587489302_8705493318578628843_n](https://github.com/TitadachFF/RestaurantFrontend/assets/120708254/5d51a550-2a17-48c0-a7df-b664c86e7b41)
+## Home Page With Roles USER and Not Login(Without Role Admin )
+![image](https://github.com/TitadachFF/RestaurantFrontend/assets/120708254/2ab991a0-e8ce-4f35-8d1a-704827144026)
+Can't Edit Delete Add 
+
+## With Roles Admin
+![image](https://github.com/TitadachFF/RestaurantFrontend/assets/120708254/021010f9-9aed-4d74-ac3a-46d50c8805a5)
+Can Edit Delete Add 
+
+
+
